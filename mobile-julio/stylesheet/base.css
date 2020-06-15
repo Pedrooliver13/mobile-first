@@ -1,0 +1,147 @@
+/* resetar o css */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  text-decoration: none;
+  list-style: none;
+
+  /* 
+    border-box --> ISSO É IMPORTANTE,  
+    ELE FAZ COM QUE A LARGURA 
+    NÃO FAÇA UMA SOMA COM O PADDING, 
+    ASSIM VC TEM UMA 
+    CONSISTENCIA NO LAYOUT 
+  */
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #282a36;
+  --secondary-color: #50fa7b;
+
+  --gray: #f8f8f2;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+}
+
+/* nessa parte gosto de colocar coisas que podem ser reutilizadas,  mas o melhor é separa as partes em outro css */
+body {
+  background-color: var(--primary-color);
+  color: var(--gray);
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+
+  margin: 24px 0;
+  color: var(--purple);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  max-width: 100%;
+  padding: 8px;
+  
+  background-color: var(--secondary-color);
+  color: var(--gray);
+  border-radius: 3.5px;
+  
+  font-size: 1em;
+  font-weight: bold;
+  
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* header */
+header, footer {
+  background-color: var(--primary-color);
+  filter: brightness(150%);
+
+  padding: 16px 0px;
+  text-align: center;
+}
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: bold;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+header .menu .logo {
+  color: var(--primary-color);
+  background-color: var(--purple);
+
+  padding: 4px 8px;
+  border-radius: 3.5px;
+}
+
+header .menu ul{
+  display: flex;
+  align-items: center;
+}
+
+ 
+header .menu .menu-nav ul li a{
+  color: var(--gray);
+  margin: 0px 8px;
+}
+
+
+
+/* CONTAINER , USAMOS PARA LIMITAR UM TAMANHO, OU SEJA ,NADA FICA FORA DE ALINHAMENTO  */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* BREAKPOINT 768px */
+@media (min-width: 48em) {
+  .container {
+      max-width: 720px;
+  }
+}
+
+/* BREAKPOINT 992px */
+@media (min-width: 62em) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+/* BREAKPOINT 1200px */
+@media (min-width: 75em) {
+  .containe-fluid {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+}

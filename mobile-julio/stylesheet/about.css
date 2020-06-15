@@ -1,0 +1,10 @@
+.about .about-content{
+  
+  font-size: 1.1em;
+  text-align: justify;
+
+  line-height: 1.1em;
+}
+.about .about-content span {
+  color: var(--secondary-color);
+}

@@ -1,0 +1,42 @@
+
+/* profile */
+.profile {
+  /* 
+    Caso não conheça 
+    o display flex 
+    estude ele e o grid
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px;
+  margin: 25px auto;
+
+  border-radius: 3.5px;
+}
+
+.profile .profile-image img {
+  width: 150px;
+  height: 150px;
+
+  padding: 8px;
+  
+  /* borda redonda */
+  border-radius: 50%;
+  border: 3px dashed var(--secondary-color);
+
+  /* imagem se adaptar à largura e altura */
+  object-fit: cover;
+
+  /* posição da imagem */
+  object-position: center right;
+}
+
+.profile .profile-title {
+  text-align: center;
+  font-size: 1.1em;
+}
+.profile .profile-title p{
+  filter: brightness(70%);
+}
